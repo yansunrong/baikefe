@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sign in &middot; Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="animate.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .form-signin {
+            max-width: 600px;
+            padding: 19px 29px 29px;
+            margin: 0 auto 20px;
+            background-color: #fff;
+            border: 1px solid #e5e5e5;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+            -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+        }
+
+        .form-signin .form-signin-heading,
+        .form-signin .checkbox {
+            margin-bottom: 10px;
+        }
+
+        .form-signin input[type="text"],
+        .form-signin input[type="password"] {
+            font-size: 16px;
+            height: auto;
+            margin-bottom: 15px;
+            padding: 7px 9px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <form class="form-signin" id="cms-form">
+        <h2 class="form-signin-heading swing">百科CMS上线 by yansunrong</h2>
+
+        <div class="alert alert-error alert-login" style="display: none">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            提醒:大哥麻烦先登录一下下哟！
+
+        </div>
+        <div class="controls controls-row">
+            <label class="radio span2">
+                <input type="radio" name="svn" value="app/search/wiki/fe/fis-lemma" checked>
+                fis-lemma
+            </label>
+            <label class="radio span2">
+                <input type="radio" name="svn" value="app/search/wiki/fe/fis-edit">
+                fis-edit
+            </label>
+            <label class="radio span2">
+                <input type="radio" name="svn" value="app/search/wiki/fe/fis-common">
+                fis-common
+            </label>
+            <label class="radio span2">
+                <input type="radio" name="svn" value="app/search/wiki/fe/fis-usercenter">
+                fis-usercenter
+            </label>
+            <label class="radio span2">
+                <input type="radio" name="svn" value="app/search/wiki/fe/wiki-php">
+                wiki-php
+            </label>
+            <label class="radio span2">
+                <input type="radio" name="svn" value="app/search/wiki/fe/kedou">
+                kedou
+            </label>
+            <label class="radio span2">
+                <input type="radio" name="svn" id="other" value="other">
+                其它
+            </label>
+        </div>
+        <input type="text" id="svn-path" class="input-block-level" placeholder="模块SVN地址" style="display: none"/>
+        <input type="text" id="version" required class="input-block-level" placeholder="三位版本,如1.0.3">
+        <input type="text" id="md5" class="input-block-level" placeholder="MD5" required>
+
+        <button class="btn btn-large btn-primary public" type="submit" id="public">开始上线</button>
+        <button class="btn btn-large btn-danger clearPage" type="button" id="clearPage">一键清词条页缓存</button>
+        <div class="progress progress-striped active" style="margin-top:20px;">
+            <div class="bar" style="width: 5%;" id="progress"></div>
+        </div>
+    </form>
+
+    <div id="result" style="display: none;"></div>
+    <div id="iframe">
+
+    </div>
+
+</div>
+<!-- /container -->
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="cms.js"></script>
+</body>
+</html>
