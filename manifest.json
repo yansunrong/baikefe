@@ -1,6 +1,6 @@
 {
-    "name": "CMS 上线插件",
-    "version": "1",
+    "name": "CMS上线插件 - 快上线",
+    "version": "1.1",
     "description": "支持一键上线",
     "icons": {
         "16": "16.png",
@@ -27,6 +27,13 @@
             "css": [ ],
             "js": [ "content_scripts/cms.js" ],
             "matches": [ "http://icms.baidu.com:8080/*" ],
+            "all_frames":true,
+            "run_at":"document_idle"
+        },
+		{
+            "css": [ ],
+            "js": [ "popup/jquery.js","popup/cms.js" ],
+            "matches": [ "http://icafe.baidu.com:8000/icafe/icafeprojectmoduleview/displayModuleView.action*" ],
             "all_frames":true,
             "run_at":"document_idle"
         }

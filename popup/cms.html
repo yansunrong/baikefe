@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Sign in &middot; Twitter Bootstrap</title>
+    <title>快上线</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -16,9 +16,12 @@
             padding-bottom: 40px;
             background-color: #f5f5f5;
         }
+		
+		.clearfix:after{content:'';display:block;height:0;clear:both;}
+		.clearfix{zoom:1;}
 
         .form-signin {
-            max-width: 600px;
+            max-width: 800px;
             padding: 19px 29px 29px;
             margin: 0 auto 20px;
             background-color: #fff;
@@ -29,7 +32,7 @@
             -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
             -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
             box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-        }
+        }	
 
         .form-signin .form-signin-heading,
         .form-signin .checkbox {
@@ -43,7 +46,14 @@
             margin-bottom: 15px;
             padding: 7px 9px;
         }
-
+		
+		#clearPage{margin-left:30px;}
+		.svnList label{vertical-align:middle;display:inline-block;margin:0;padding:0;width:150px;}
+		.svnList input[type="text"],.svnList input[type="checkbox"]{vertical-align:middle;display:inline;margin:0;padding:0;}
+		.svnList input[type="text"]{padding:2px 10px;font-size:14px;width:250px;}
+		.svnList input[name="version"]{width:76px;}
+		.svnList input[name="svnurl"]{width:220px;}
+		.svnList li{height:35px;line-height:35px;}
     </style>
 </head>
 
@@ -51,14 +61,104 @@
 
 <div class="container">
     <form class="form-signin" id="cms-form">
-        <h2 class="form-signin-heading swing">百科CMS上线 by yansunrong</h2>
+        <h2 class="form-signin-heading swing">百科CMS上线<!--  by yansunrong --></h2>
 
         <div class="alert alert-error alert-login" style="display: none">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             提醒:大哥麻烦先登录一下下哟！
 
         </div>
-        <div class="controls controls-row">
+
+        <div class="svnList clearfix">
+			<ul>
+				<li> 
+					<label>
+						<input type="checkbox" name="svn">
+						fis-lemma
+					</label>
+					<input type="text" name="version" placeholder="三位版本号" value="">
+					<input type="text" name="md5" placeholder="MD5" value="">
+					<input type="hidden" name="svnurl"  placeholder="模块路径" value="app/search/wiki/fe/fis-lemma" readonly>
+				</li>
+				<li> 
+					<label>
+						<input type="checkbox" name="svn">
+						fis-edit
+					</label>
+					<input type="text" name="version" placeholder="三位版本号" value="">
+					<input type="text" name="md5" placeholder="MD5" value="">					
+					<input type="hidden" name="svnurl"  placeholder="模块路径" value="app/search/wiki/fe/fis-edit" readonly>
+
+				</li>
+				<li> 
+					<label>
+						<input type="checkbox" name="svn">
+						fis-common
+					</label>
+					<input type="text" name="version" placeholder="三位版本号" value="">
+					<input type="text" name="md5" placeholder="MD5" value="">					
+					<input type="hidden" name="svnurl"  placeholder="模块路径" value="app/search/wiki/fe/fis-common" readonly>
+
+				</li>				
+				<li> 
+					<label>
+						<input type="checkbox" name="svn">
+						fis-usercenter
+					</label>
+					<input type="text" name="version" placeholder="三位版本号" value="">
+					<input type="text" name="md5" placeholder="MD5" value="">
+					<input type="hidden" name="svnurl"  placeholder="模块路径" value="app/search/wiki/fe/fis-usercenter" readonly>
+				</li>
+				<li> 
+					<label>
+						<input type="checkbox" name="svn">
+						wiki-php
+					</label>
+					<input type="text" name="version" placeholder="三位版本号" value="">
+					<input type="text" name="md5" placeholder="MD5" value="">
+					<input type="hidden" name="svnurl"  placeholder="模块路径" value="app/search/wiki/fe/wiki-php" readonly>
+				</li>		
+				<li> 
+					<label>
+						<input type="checkbox" name="svn">
+						fis-mobile-common
+					</label>
+					<input type="text" name="version" placeholder="三位版本号" value="">
+					<input type="text" name="md5" placeholder="MD5" value="">
+					<input type="hidden" name="svnurl"  placeholder="模块路径" value="app/search/wiki/fe/fis-mobile-common" readonly>
+				</li>
+				<li> 
+					<label>
+						<input type="checkbox" name="svn">
+						fis-mobile-wiki
+					</label>
+					<input type="text" name="version" placeholder="三位版本号" value="">
+					<input type="text" name="md5" placeholder="MD5" value="">
+					<input type="hidden" name="svnurl"  placeholder="模块路径" value="app/search/wiki/fe/fis-mobile-wiki" readonly>
+				</li>				
+				<li> 
+					<label>
+						<input type="checkbox" name="svn">
+						kedou
+					</label>
+					<input type="text" name="version" placeholder="三位版本号" value="">
+					<input type="text" name="md5" placeholder="MD5" value="">
+					<input type="hidden" name="svnurl"  placeholder="模块路径" value="app/search/wiki/fe/kedou" readonly>
+				</li>
+				<li> 
+					<label>
+						<input type="checkbox" name="svn">
+						其它
+					</label>
+					<input type="text" name="version" placeholder="三位版本号" value="">
+					<input type="text" name="md5" placeholder="MD5" value="">
+					<input type="text" name="svnurl"  placeholder="模块路径" value="">
+				</li>
+			</ul>
+        </div>
+
+		<!--
+		<div class="controls controls-row">
             <label class="radio span2">
                 <input type="radio" name="svn" value="app/search/wiki/fe/fis-lemma" checked>
                 fis-lemma
@@ -88,9 +188,11 @@
                 其它
             </label>
         </div>
+        
         <input type="text" id="svn-path" class="input-block-level" placeholder="模块SVN地址" style="display: none"/>
         <input type="text" id="version" required class="input-block-level" placeholder="三位版本,如1.0.3">
-        <input type="text" id="md5" class="input-block-level" placeholder="MD5" required>
+        <input type="text" id="md5" class="input-block-level" placeholder="MD5" required> 
+		-->
 
         <button class="btn btn-large btn-primary public" type="submit" id="public">开始上线</button>
         <button class="btn btn-large btn-danger clearPage" type="button" id="clearPage">一键清词条页缓存</button>
@@ -98,7 +200,6 @@
             <div class="bar" style="width: 5%;" id="progress"></div>
         </div>
     </form>
-
     <div id="result" style="display: none;"></div>
     <div id="iframe">
 
